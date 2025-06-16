@@ -1,0 +1,3 @@
+// based on: https://trustedsec.com/blog/specula-turning-outlook-into-a-c2-with-one-registry-change
+DeviceRegistryEvents
+| where (RegistryKey contains "\\Software\\Microsoft\\Office" and (RegistryKey contains "\\Outlook\\WebView" or RegistryKey contains "\\Outlook\\Today")) and RegistryValueName contains "url"
